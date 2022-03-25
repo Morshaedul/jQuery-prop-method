@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Set Content and Attributes</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #div1{
+            height:100px;
+            width: 100px;
+            color: black;
+            background-color:red; 
+            position:absolute;
+
+        }
+    </style>
+</head>
+<body><button>Add and remove a property</button><br><br>  
+    <div></div> 
+<script>  
+   $(document).ready(function(){  
+    $("button").click(function(){  
+        var $x = $("div");  
+        $x.prop("color","#e0eeee");  
+        $x.append("The value of the color property: " + $x.prop("color"));  
+        $x.removeProp("color");  
+        $x.append("<br>Now the value of the color property: " + $x.prop("color"));  
+    });  
+});  
+    </script>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
